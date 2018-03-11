@@ -211,7 +211,7 @@ call <sid>hi('Delimiter', s:brown, '', '', '')
 call <sid>hi('Float', s:nord_orange, '', '', '')
 call <sid>hi('Function', s:nord_turquoise, '', '', '')
 call <sid>hi('Identifier', s:bone_white, '', '', '')
-call <sid>hi('Include', s:nord_green, '', '', '')
+call <sid>hi('Include', s:nord_pink, '', '', '')
 call <sid>hi('Keyword', s:nord_pink, '', '', '')
 call <sid>hi('Label', s:nord_turquoise, '', '', '')
 call <sid>hi('Number', s:nord_orange, '', '', '')
@@ -235,7 +235,7 @@ call <sid>hi('SpellCap', '', '', 'undercurl', '')
 call <sid>hi('SpellRare', '', '', 'undercurl', '')
 
 " C
-call <sid>hi('cIncluded', s:nord_pink, '', '', '')
+call <sid>hi('cIncluded', s:nord_green, '', '', '')
 
 " C++
 call <sid>hi('cppStatement', s:nord_orange, '', '', '')
