@@ -81,7 +81,7 @@ let s:nord_pink=['#b48ead', '176']
 let s:nord_turquoise=['#88c0d0', '73']
 let s:nord_blue=['#5e81ac', '68']
 let s:nord_green=['#a3b38c', '114']
-"let s:nord_light_blue=['#81a1c1', '68']
+let s:nord_light_blue=['#81a1c1', '68']
 
 "let s:cambridge_blue=['#96bbbb', '73']
 let s:brown=['#ab7967', '137']
@@ -124,7 +124,7 @@ call <sid>hi('ErrorMsg', s:nord_orange, s:indigo, '', '')
 call <sid>hi('Exception', s:nord_orange, '', '', '')
 call <sid>hi('Italic', '', '', s:italic, '')
 
-call <sid>hi('Macro', s:nord_pink, '', '', '')
+call <sid>hi('Macro', s:nord_light_blue, '', '', '')
 call <sid>hi('MatchParen', s:nord_orange, s:indigo, '', '')
 call <sid>hi('ModeMsg', s:nord_green, '', '', '')
 call <sid>hi('MoreMsg', s:nord_green, '', '', '')
@@ -181,23 +181,23 @@ call <sid>hi('Character', s:bone_white, '', '', '')
 call <sid>hi('Comment', s:light_indigo, '', s:italic, '')
 call <sid>hi('Conditional', s:nord_pink, '', '', '')
 call <sid>hi('Constant', s:nord_orange, '', '', '')
-call <sid>hi('Define', s:nord_pink, '', '', '')
+call <sid>hi('Define', s:nord_light_blue, '', '', '')
 call <sid>hi('Delimiter', s:brown, '', '', '')
 call <sid>hi('Float', s:nord_orange, '', '', '')
 call <sid>hi('Function', s:nord_turquoise, '', '', '')
 call <sid>hi('Identifier', s:bone_white, '', '', '')
-call <sid>hi('Include', s:nord_pink, '', '', '')
+call <sid>hi('Include', s:nord_light_blue, '', '', '')
 call <sid>hi('Keyword', s:nord_pink, '', '', '')
-call <sid>hi('Label', s:nord_turquoise, '', '', '')
+call <sid>hi('Label', s:nord_pink, '', '', '')
 call <sid>hi('Number', s:nord_orange, '', '', '')
 call <sid>hi('Operator', s:medium_silver, '', '', '')
 call <sid>hi('PreProc', s:nord_green, '', '', '')
 call <sid>hi('Repeat', s:nord_pink, '', '', '')
 call <sid>hi('Special', s:nord_green, '', '', '')
-call <sid>hi('SpecialChar', s:brown, '', '', '')
-call <sid>hi('Statement', s:nord_turquoise, '', '', '')
+call <sid>hi('SpecialChar', s:nord_orange, '', '', '')
+call <sid>hi('Statement', s:nord_orange, '', '', '')
 call <sid>hi('StorageClass', s:nord_turquoise, '', '', '')
-call <sid>hi('String', s:nord_pink, '', '', '')
+call <sid>hi('String', s:nord_green, '', '', '')
 call <sid>hi('Structure', s:nord_turquoise, '', '', '')
 call <sid>hi('Tag', s:nord_turquoise, '', '', '')
 call <sid>hi('Todo', s:nord_yellow, s:indigo, '', '')
@@ -211,10 +211,11 @@ call <sid>hi('SpellRare', '', '', 'undercurl', '')
 
 " C
 call <sid>hi('cIncluded', s:nord_green, '', '', '')
+call <sid>hi('cStorageClass', s:nord_turquoise, '', '', '')
 
 " C++
 call <sid>hi('cppStatement', s:nord_orange, '', '', '')
-call <sid>hi('cppModifier', s:nord_turquoise, '', '', '')
+call <sid>hi('cppModifier', s:nord_green, '', '', '')
 call <sid>hi('cppAccess', s:nord_orange, '', '', '')
 call <sid>hi('cppExceptions', s:nord_orange, '', '', '')
 call <sid>hi('cppOperator', s:nord_green, '', '', '')
