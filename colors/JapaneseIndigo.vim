@@ -83,11 +83,6 @@ let s:nord_blue=['#5e81ac', '68']
 let s:nord_green=['#a3b38c', '114']
 "let s:nord_light_blue=['#81a1c1', '68']
 
-" pastel colors
-let s:pastel_green=['#99c794', '114']
-"let s:pastel_turquoise=['#62b3b2', '73']
-let s:pastel_purple=['#ad7fa8', '176']
-
 "let s:cambridge_blue=['#96bbbb', '73']
 let s:brown=['#ab7967', '137']
 "let s:steel_teal=['#618985', '74']
@@ -127,40 +122,18 @@ call <sid>hi('Debug', s:bone_white, '', '', '')
 call <sid>hi('Directory', s:nord_blue, '', '', '')
 call <sid>hi('ErrorMsg', s:nord_orange, s:indigo, '', '')
 call <sid>hi('Exception', s:nord_orange, '', '', '')
-call <sid>hi('FoldColumn', s:nord_blue, s:indigo, '', '')
-call <sid>hi('Folded', s:light_indigo, s:medium_indigo, s:italic, '')
 call <sid>hi('Italic', '', '', s:italic, '')
 
 call <sid>hi('Macro', s:nord_pink, '', '', '')
 call <sid>hi('MatchParen', s:nord_orange, s:indigo, '', '')
-"call <sid>hi('MatchParen', s:nord_orange, s:indigo, '', '')
-call <sid>hi('ModeMsg', s:pastel_green, '', '', '')
-call <sid>hi('MoreMsg', s:pastel_green, '', '', '')
+call <sid>hi('ModeMsg', s:nord_green, '', '', '')
+call <sid>hi('MoreMsg', s:nord_green, '', '', '')
 call <sid>hi('Question', s:nord_blue, '', '', '')
 
-" read search
-"call <sid>hi('Search', s:nord_red, s:indigo, '', '')
-"call <sid>hi('IncSearch', s:nord_red, s:indigo, '', '')
-
-" red search highlight
-"call <sid>hi('Search', s:indigo, s:nord_red, '', '')
-"call <sid>hi('IncSearch', s:medium_indigo, s:nord_red, '', '')
-
-" yellow search highlight
-"call <sid>hi('Search', s:indigo, s:nord_yellow, '', '')
-"call <sid>hi('IncSearch', s:medium_indigo, s:nord_yellow, '', '')
-
-" pink search highlight
-"call <sid>hi('Search', s:indigo, s:pastel_purple, '', '')
-"call <sid>hi('IncSearch', s:medium_indigo, s:pastel_purple, '', '')
-
-" nord blue search
-"call <sid>hi('Search', s:indigo, s:nord_blue, '', '')
-"call <sid>hi('IncSearch', s:medium_indigo, s:nord_turquoise, '', '')
-
-" turquoise search
-call <sid>hi('Search', s:indigo, s:nord_turquoise, '', '')
-call <sid>hi('IncSearch', s:medium_indigo, s:nord_turquoise, '', '')
+call <sid>hi('PMenu', s:dark_silver, s:medium_indigo, '', '')
+call <sid>hi('PMenuSel', s:white, s:nord_blue, '', '')
+call <sid>hi('PmenuSbar', '', s:medium_grey, '', '')
+call <sid>hi('PmenuThumb', '', s:light_silver, '', '')
 
 call <sid>hi('SpecialKey', s:light_indigo, '', '', '')
 call <sid>hi('TooLong', s:bone_white, '', '', '')
@@ -182,15 +155,17 @@ call <sid>hi('StatusLineNC', s:medium_indigo, s:light_indigo, '', '')
 call <sid>hi('VertSplit', s:medium_indigo, s:medium_grey, '', '')
 call <sid>hi('ColorColumn', '', s:medium_indigo, '', '')
 
+" Gutter
+call <sid>hi('FoldColumn', s:nord_blue, s:indigo, '', '')
+call <sid>hi('Folded', s:light_indigo, s:medium_indigo, s:italic, '')
 call <sid>hi('CursorColumn', '', s:medium_indigo, '', '')
 call <sid>hi('CursorLine', '', s:medium_indigo, 'NONE', '')
 call <sid>hi('CursorLineNR', s:indigo, s:indigo, '', '')
 call <sid>hi('CursorLineNr', s:light_indigo, s:medium_indigo, '', '')
 
-call <sid>hi('PMenu', s:dark_silver, s:medium_indigo, '', '')
-call <sid>hi('PMenuSel', s:white, s:nord_blue, '', '')
-call <sid>hi('PmenuSbar', '', s:medium_grey, '', '')
-call <sid>hi('PmenuThumb', '', s:light_silver, '', '')
+" Search
+call <sid>hi('Search', s:indigo, s:nord_turquoise, '', '')
+call <sid>hi('IncSearch', s:medium_indigo, s:nord_turquoise, '', '')
 
 " Tabs
 call <sid>hi('TabLine', s:light_indigo, s:medium_indigo, '', '')
@@ -222,7 +197,7 @@ call <sid>hi('Special', s:nord_green, '', '', '')
 call <sid>hi('SpecialChar', s:brown, '', '', '')
 call <sid>hi('Statement', s:nord_turquoise, '', '', '')
 call <sid>hi('StorageClass', s:nord_turquoise, '', '', '')
-call <sid>hi('String', s:pastel_purple, '', '', '')
+call <sid>hi('String', s:nord_pink, '', '', '')
 call <sid>hi('Structure', s:nord_turquoise, '', '', '')
 call <sid>hi('Tag', s:nord_turquoise, '', '', '')
 call <sid>hi('Todo', s:nord_yellow, s:indigo, '', '')
@@ -242,12 +217,12 @@ call <sid>hi('cppStatement', s:nord_orange, '', '', '')
 call <sid>hi('cppModifier', s:nord_turquoise, '', '', '')
 call <sid>hi('cppAccess', s:nord_orange, '', '', '')
 call <sid>hi('cppExceptions', s:nord_orange, '', '', '')
-call <sid>hi('cppOperator', s:nord_turquoise, '', '', '')
+call <sid>hi('cppOperator', s:nord_green, '', '', '')
 call <sid>hi('cppCast', s:nord_orange, '', '', '')
 call <sid>hi('cppStorageClass', s:nord_turquoise, '', '', '')
 call <sid>hi('cppStructure', s:nord_turquoise, '', '', '')
 call <sid>hi('cppConstant', s:nord_orange, '', '', '')
-call <sid>hi('cppRawString', s:pastel_purple, '', '', '')
+call <sid>hi('cppRawString', s:nord_pink, '', '', '')
 
 call <sid>hi('csClass', s:nord_yellow, '', '', '')
 call <sid>hi('csAttribute', s:nord_yellow, '', '', '')
@@ -263,18 +238,18 @@ call <sid>hi('cssColor', s:nord_turquoise, '', '', '')
 call <sid>hi('cssBraces', s:medium_silver, '', '', '')
 call <sid>hi('cssClassName', s:nord_pink, '', '', '')
 
-call <sid>hi('DiffAdd', s:pastel_green, s:medium_indigo, '', '')
+call <sid>hi('DiffAdd', s:nord_green, s:medium_indigo, '', '')
 call <sid>hi('DiffChange', s:light_indigo, s:medium_indigo, '', '')
 call <sid>hi('DiffDelete', s:bone_white, s:medium_indigo, '', '')
 call <sid>hi('DiffText', s:nord_blue, s:medium_indigo, '', '')
-call <sid>hi('DiffAdded', s:white, s:pastel_green, '', '')
+call <sid>hi('DiffAdded', s:white, s:nord_green, '', '')
 call <sid>hi('DiffFile', s:bone_white, s:indigo, '', '')
-call <sid>hi('DiffNewFile', s:pastel_green, s:indigo, '', '')
+call <sid>hi('DiffNewFile', s:nord_green, s:indigo, '', '')
 call <sid>hi('DiffLine', s:nord_blue, s:indigo, '', '')
 call <sid>hi('DiffRemoved', s:white, s:bone_white, '', '')
 
 call <sid>hi('gitCommitOverflow', s:bone_white, '', '', '')
-call <sid>hi('gitCommitSummary', s:pastel_green, '', '', '')
+call <sid>hi('gitCommitSummary', s:nord_green, '', '', '')
 
 call <sid>hi('htmlBold', s:nord_yellow, '', '', '')
 call <sid>hi('htmlItalic', s:nord_pink, '', '', '')
@@ -287,8 +262,8 @@ call <sid>hi('javaScript', s:medium_silver, '', '', '')
 call <sid>hi('javaScriptNumber', s:nord_orange, '', '', '')
 call <sid>hi('javaScriptBraces', s:medium_silver, '', '', '')
 
-call <sid>hi('markdownCode', s:pastel_green, '', '', '')
-call <sid>hi('markdownCodeBlock', s:pastel_green, '', '', '')
+call <sid>hi('markdownCode', s:nord_green, '', '', '')
+call <sid>hi('markdownCodeBlock', s:nord_green, '', '', '')
 call <sid>hi('markdownHeadingDelimiter', s:nord_blue, '', '', '')
 call <sid>hi('markdownItalic', s:nord_pink, '', s:italic, '')
 call <sid>hi('markdownBold', s:nord_yellow, '', s:bold, '')
@@ -317,11 +292,11 @@ call <sid>hi('pythonRepeat', s:nord_pink, '', '', '')
 call <sid>hi('pythonOperator', s:nord_pink, '', '', '')
 
 call <sid>hi('rubyConstant', s:nord_yellow, '', '', '')
-call <sid>hi('rubySymbol', s:pastel_green, '', '', '')
+call <sid>hi('rubySymbol', s:nord_green, '', '', '')
 call <sid>hi('rubyAttribute', s:nord_blue, '', '', '')
-call <sid>hi('rubyInterpolation', s:pastel_green, '', '', '')
+call <sid>hi('rubyInterpolation', s:nord_green, '', '', '')
 call <sid>hi('rubyInterpolationDelimiter', s:brown, '', '', '')
-call <sid>hi('rubyStringDelimiter', s:pastel_green, '', '', '')
+call <sid>hi('rubyStringDelimiter', s:nord_green, '', '', '')
 call <sid>hi('rubyRegexp', s:nord_turquoise, '', '', '')
 
 call <sid>hi('sassidChar', s:bone_white, '', '', '')
@@ -335,7 +310,7 @@ call <sid>hi('vimfilerNormalFile', s:medium_silver, s:indigo, '', '')
 call <sid>hi('vimfilerOpenedFile', s:nord_blue, '', '', '')
 call <sid>hi('vimfilerClosedFile', s:nord_blue, '', '', '')
 
-call <sid>hi('GitGutterAdd', s:pastel_green, s:indigo, s:bold, '')
+call <sid>hi('GitGutterAdd', s:nord_green, s:indigo, s:bold, '')
 call <sid>hi('GitGutterChange', s:nord_blue, s:indigo, s:bold, '')
 call <sid>hi('GitGutterDelete', s:bone_white, s:indigo, s:bold, '')
 call <sid>hi('GitGutterChangeDelete', s:nord_pink, s:indigo, s:bold, '')
@@ -350,8 +325,8 @@ let g:terminal_color_8=s:indigo[0]
 let g:terminal_color_1=s:bone_white[0]
 let g:terminal_color_9=s:bone_white[0]
 
-let g:terminal_color_2=s:pastel_green[0]
-let g:terminal_color_10=s:pastel_green[0]
+let g:terminal_color_2=s:nord_green[0]
+let g:terminal_color_10=s:nord_green[0]
 
 let g:terminal_color_3=s:nord_yellow[0]
 let g:terminal_color_11=s:nord_yellow[0]
