@@ -61,8 +61,8 @@ endif
 " Colors
 " ---------------------------------------------------------------
 " indigo / theme base
-let s:indigo=['#313b49', '235']
-let s:medium_indigo=['#3d4754', '237']
+let s:indigo=['#2e3745', '235']
+let s:medium_indigo=['#37414e', '237']
 let s:light_indigo=['#65737e', '243']
 let s:medium_grey=['#4f5b66', '240']
 
@@ -138,7 +138,7 @@ call <sid>hi('PmenuThumb', '', s:light_silver, '', '')
 call <sid>hi('SpecialKey', s:light_indigo, '', '', '')
 call <sid>hi('TooLong', s:bone_white, '', '', '')
 call <sid>hi('Underlined', s:bone_white, '', '', '')
-call <sid>hi('Visual', '', s:medium_grey, '', '')
+call <sid>hi('Visual', '', s:nord_blue, '', '')
 call <sid>hi('VisualNOS', s:bone_white, '', '', '')
 call <sid>hi('WarningMsg', s:bone_white, '', '', '')
 call <sid>hi('WildMenu', s:white, s:nord_blue, '', '')
@@ -212,6 +212,8 @@ call <sid>hi('SpellRare', '', '', 'undercurl', '')
 " C
 call <sid>hi('cIncluded', s:nord_green, '', '', '')
 call <sid>hi('cStorageClass', s:nord_turquoise, '', '', '')
+call <sid>hi('cOperator', s:nord_turquoise, '', '', '')
+call <sid>hi('cPreCondit', s:nord_pink, '', '', '')
 
 " C++
 call <sid>hi('cppStatement', s:nord_orange, '', '', '')
@@ -225,6 +227,9 @@ call <sid>hi('cppStructure', s:nord_turquoise, '', '', '')
 call <sid>hi('cppConstant', s:nord_orange, '', '', '')
 call <sid>hi('cppRawString', s:nord_pink, '', '', '')
 
+" Rust
+call <sid>hi('rustStorage', s:nord_orange, '', '', '')
+
 call <sid>hi('csClass', s:nord_yellow, '', '', '')
 call <sid>hi('csAttribute', s:nord_yellow, '', '', '')
 call <sid>hi('csModifier', s:nord_pink, '', '', '')
@@ -232,8 +237,6 @@ call <sid>hi('csType', s:bone_white, '', '', '')
 call <sid>hi('csUnspecifiedStatement', s:nord_blue, '', '', '')
 call <sid>hi('csContextualStatement', s:nord_pink, '', '', '')
 call <sid>hi('csNewDecleration', s:bone_white, '', '', '')
-call <sid>hi('cOperator', s:nord_turquoise, '', '', '')
-call <sid>hi('cPreCondit', s:nord_pink, '', '', '')
 
 call <sid>hi('cssColor', s:nord_turquoise, '', '', '')
 call <sid>hi('cssBraces', s:medium_silver, '', '', '')
