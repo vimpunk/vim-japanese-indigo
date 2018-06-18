@@ -42,7 +42,7 @@ endif
 " ---------------------------------------------------------------
 let g:japanese_indigo_terminal_italic = get(g:, 'japanese_indigo_terminal_italic', 0)
 let s:italic = ""
-if g:japanese_indigo_terminal_italic == 1
+if g:japanese_indigo_terminal_italic
     let s:italic = "italic"
 endif
 
@@ -52,17 +52,36 @@ endif
 " ---------------------------------------------------------------
 let g:japanese_indigo_terminal_bold = get(g:, 'japanese_indigo_terminal_bold', 0)
 let s:bold = ""
-if g:japanese_indigo_terminal_bold == 1
+if g:japanese_indigo_terminal_bold
     let s:bold = "bold"
 endif
 
+" ---------------------------------------------------------------
+" Hi-Contrast Mode
+" ---------------------------------------------------------------
+let g:japanese_indigo_darkness = get(g:, 'japanese_indigo_darkness', 'low')
+
+" ---------------------------------------------------------------
+" Uniform Diff Bg
+" ---------------------------------------------------------------
+let g:japanese_indigo_uniform_diff_bg = get(g:, 'japanese_indigo_uniform_diff_bg', 0)
 
 " ---------------------------------------------------------------
 " Colors
 " ---------------------------------------------------------------
 " indigo / theme base
-let s:indigo=['#2e3745', '235']
+let s:indigo=['#29323e', '235']
+if g:japanese_indigo_darkness ==? 'low'
+    let s:indigo=['#2e3745', '235']
+elseif g:japanese_indigo_darkness ==? 'normal'
+    let s:indigo=['#29323e', '235']
+elseif g:japanese_indigo_darkness ==? 'high'
+    let s:indigo=['#252c37', '235']
+endif  
 let s:medium_indigo=['#37414e', '237']
+if g:japanese_indigo_darkness ==? 'high'
+    let s:medium_indigo=['#2c343e', '235']
+endif  
 let s:light_indigo=['#65737e', '243']
 let s:medium_grey=['#4f5b66', '240']
 
@@ -71,6 +90,9 @@ let s:medium_silver=['#c0c5ce', '251']
 "let s:base06=['#cdd3de', '252']
 let s:light_silver=['#d8dee9', '253']
 let s:bone_white=['#aab1be', '203']
+if g:japanese_indigo_darkness !=? 'low'
+    let s:bone_white=['#a0a6b3', '203']
+endif
 
 " nord colors
 let s:nord_yellow=['#ebcb8b', '221']
@@ -242,10 +264,17 @@ call <sid>hi('cssColor', s:nord_turquoise, '', '', '')
 call <sid>hi('cssBraces', s:medium_silver, '', '', '')
 call <sid>hi('cssClassName', s:nord_pink, '', '', '')
 
-call <sid>hi('DiffAdd', s:nord_green, s:medium_indigo, '', '')
-call <sid>hi('DiffChange', s:light_indigo, s:medium_indigo, '', '')
-call <sid>hi('DiffDelete', s:bone_white, s:medium_indigo, '', '')
-call <sid>hi('DiffText', s:nord_blue, s:medium_indigo, '', '')
+if g:japanese_indigo_uniform_diff_bg
+    call <sid>hi('DiffAdd', s:nord_green, s:medium_indigo, '', '')
+    call <sid>hi('DiffChange', s:light_indigo, s:medium_indigo, '', '')
+    call <sid>hi('DiffDelete', s:bone_white, s:medium_indigo, '', '')
+    call <sid>hi('DiffText', s:nord_blue, s:medium_indigo, '', '')
+else
+    call <sid>hi('DiffAdd', s:indigo, s:nord_green, '', '')
+    call <sid>hi('DiffChange', s:light_indigo, s:medium_indigo, '', '')
+    call <sid>hi('DiffDelete', s:indigo, s:nord_dark_red, '', '')
+    call <sid>hi('DiffText', s:nord_yellow, s:medium_indigo, '', '')
+endif
 call <sid>hi('DiffAdded', s:white, s:nord_green, '', '')
 call <sid>hi('DiffFile', s:bone_white, s:indigo, '', '')
 call <sid>hi('DiffNewFile', s:nord_green, s:indigo, '', '')
