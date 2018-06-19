@@ -57,12 +57,13 @@ if g:japanese_indigo_terminal_bold
 endif
 
 " ---------------------------------------------------------------
-" Hi-Contrast Mode
+" Contrast Settings
 " ---------------------------------------------------------------
-let g:japanese_indigo_darkness = get(g:, 'japanese_indigo_darkness', 'low')
+let g:japanese_indigo_bg = get(g:, 'japanese_indigo_bg', 'normal')
+let g:japanese_indigo_fg = get(g:, 'japanese_indigo_fg', 'normal')
 
 " ---------------------------------------------------------------
-" Uniform Diff Bg
+" Uniform Diff Background
 " ---------------------------------------------------------------
 let g:japanese_indigo_uniform_diff_bg = get(g:, 'japanese_indigo_uniform_diff_bg', 0)
 
@@ -71,15 +72,15 @@ let g:japanese_indigo_uniform_diff_bg = get(g:, 'japanese_indigo_uniform_diff_bg
 " ---------------------------------------------------------------
 " indigo / theme base
 let s:indigo=['#29323e', '235']
-if g:japanese_indigo_darkness ==? 'low'
+if g:japanese_indigo_bg ==? 'light'
     let s:indigo=['#2e3745', '235']
-elseif g:japanese_indigo_darkness ==? 'normal'
+elseif g:japanese_indigo_bg ==? 'normal'
     let s:indigo=['#29323e', '235']
-elseif g:japanese_indigo_darkness ==? 'high'
+elseif g:japanese_indigo_bg ==? 'dark'
     let s:indigo=['#252c37', '235']
 endif  
 let s:medium_indigo=['#37414e', '237']
-if g:japanese_indigo_darkness ==? 'high'
+if g:japanese_indigo_bg ==? 'dark'
     let s:medium_indigo=['#2c343e', '235']
 endif  
 let s:light_indigo=['#65737e', '243']
@@ -90,7 +91,7 @@ let s:medium_silver=['#c0c5ce', '251']
 "let s:base06=['#cdd3de', '252']
 let s:light_silver=['#d8dee9', '253']
 let s:bone_white=['#aab1be', '203']
-if g:japanese_indigo_darkness !=? 'low'
+if g:japanese_indigo_fg ==? 'dark'
     let s:bone_white=['#a0a6b3', '203']
 endif
 
