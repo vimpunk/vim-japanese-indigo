@@ -90,9 +90,9 @@ let s:dark_silver=['#a7adba', '145']
 let s:medium_silver=['#c0c5ce', '251']
 "let s:base06=['#cdd3de', '252']
 let s:light_silver=['#d8dee9', '253']
-let s:bone_white=['#aab1be', '203']
-if g:japanese_indigo_fg ==? 'dark'
-    let s:bone_white=['#a0a6b3', '203']
+let s:bone_white=['#a0a6b3', '203']
+if g:japanese_indigo_fg ==? 'light'
+    let s:bone_white=['#aab1be', '203']
 endif
 
 " nord colors
