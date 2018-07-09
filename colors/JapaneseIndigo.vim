@@ -101,6 +101,7 @@ let s:nord_orange=['#d08770', '209']
 "let s:nord_red=['#bf616a', '176']
 let s:nord_dark_red=['#9d5057', '221']
 let s:nord_pink=['#b48ead', '176']
+" consider switching turquoise to b4baca or 80b4c4
 let s:nord_turquoise=['#88c0d0', '73']
 let s:nord_blue=['#5e81ac', '68']
 let s:nord_green=['#a3b38c', '114']
@@ -188,7 +189,7 @@ call <sid>hi('CursorLineNr', s:light_indigo, s:medium_indigo, '', '')
 
 " Search
 call <sid>hi('Search', s:indigo, s:nord_turquoise, '', '')
-call <sid>hi('IncSearch', s:medium_indigo, s:nord_turquoise, '', '')
+call <sid>hi('IncSearch', s:nord_yellow, s:indigo, '', '')
 
 " Tabs
 call <sid>hi('TabLine', s:light_indigo, s:medium_indigo, '', '')
