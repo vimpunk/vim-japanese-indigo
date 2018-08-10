@@ -98,7 +98,7 @@ endif
 " nord colors
 let s:nord_yellow=['#ebcb8b', '221']
 let s:nord_orange=['#d08770', '209']
-"let s:nord_red=['#bf616a', '176']
+let s:nord_red=['#bf616a', '176']
 let s:nord_dark_red=['#9d5057', '221']
 let s:nord_pink=['#b48ead', '176']
 " consider switching turquoise to b4baca or 80b4c4
@@ -144,7 +144,8 @@ endfunction
 call <sid>hi('Bold', '', '', 'bold', '')
 call <sid>hi('Debug', s:bone_white, '', '', '')
 call <sid>hi('Directory', s:nord_blue, '', '', '')
-call <sid>hi('ErrorMsg', s:nord_orange, s:indigo, '', '')
+call <sid>hi('Error', s:nord_red, s:indigo, '', '')
+call <sid>hi('ErrorMsg', s:nord_red, s:indigo, '', '')
 call <sid>hi('Exception', s:nord_orange, '', '', '')
 call <sid>hi('Italic', '', '', s:italic, '')
 
@@ -194,7 +195,7 @@ call <sid>hi('IncSearch', s:nord_yellow, s:indigo, '', '')
 " Tabs
 call <sid>hi('TabLine', s:light_indigo, s:medium_indigo, '', '')
 call <sid>hi('TabLineFill', s:medium_indigo, s:medium_indigo, '', '')
-call <sid>hi('TabLineSel', s:bone_white, s:medium_indigo, '', '')
+call <sid>hi('TabLineSel', s:bone_white, s:indigo, '', '')
 
 call <sid>hi('helpExample', s:nord_yellow, '', '', '')
 call <sid>hi('helpCommand', s:nord_yellow, '', '', '')
