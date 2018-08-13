@@ -214,7 +214,7 @@ call <sid>hi('Include', s:nord_light_blue, '', '', '')
 call <sid>hi('Keyword', s:nord_pink, '', '', '')
 call <sid>hi('Label', s:nord_pink, '', '', '')
 call <sid>hi('Number', s:nord_orange, '', '', '')
-call <sid>hi('Operator', s:medium_silver, '', '', '')
+call <sid>hi('Operator', s:nord_pink, '', '', '')
 call <sid>hi('PreProc', s:nord_green, '', '', '')
 call <sid>hi('Repeat', s:nord_pink, '', '', '')
 call <sid>hi('Special', s:nord_green, '', '', '')
@@ -236,7 +236,7 @@ call <sid>hi('SpellRare', '', '', 'undercurl', '')
 " C
 call <sid>hi('cIncluded', s:nord_green, '', '', '')
 call <sid>hi('cStorageClass', s:nord_turquoise, '', '', '')
-call <sid>hi('cOperator', s:nord_turquoise, '', '', '')
+call <sid>hi('cOperator', s:nord_pink, '', '', '')
 call <sid>hi('cPreCondit', s:nord_pink, '', '', '')
 
 " C++
