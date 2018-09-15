@@ -36,11 +36,23 @@ else
     endif
 endif
 
+" ---------------------------------------------------------------
+" Option variables
+" ---------------------------------------------------------------
+let g:japanese_indigo_bg = get(g:, 'japanese_indigo_bg', 'dark')
+let g:japanese_indigo_fg = get(g:, 'japanese_indigo_fg', 'normal')
+
+let g:japanese_indigo_terminal_italic = get(g:, 'japanese_indigo_terminal_italic', 1)
+let g:japanese_indigo_terminal_bold = get(g:, 'japanese_indigo_terminal_bold', 1)
+
+let g:japanese_indigo_uniform_diff_bg = get(g:, 'japanese_indigo_uniform_diff_bg', 0)
+
+let g:japanese_indigo_vert_split = get(g:, 'japanese_indigo_vert_split', 0)
+
 
 " ---------------------------------------------------------------
 " Italics
 " ---------------------------------------------------------------
-let g:japanese_indigo_terminal_italic = get(g:, 'japanese_indigo_terminal_italic', 0)
 let s:italic = ""
 if g:japanese_indigo_terminal_italic
     let s:italic = "italic"
@@ -50,22 +62,11 @@ endif
 " ---------------------------------------------------------------
 " Bold
 " ---------------------------------------------------------------
-let g:japanese_indigo_terminal_bold = get(g:, 'japanese_indigo_terminal_bold', 0)
 let s:bold = ""
 if g:japanese_indigo_terminal_bold
     let s:bold = "bold"
 endif
 
-" ---------------------------------------------------------------
-" Contrast Settings
-" ---------------------------------------------------------------
-let g:japanese_indigo_bg = get(g:, 'japanese_indigo_bg', 'dark')
-let g:japanese_indigo_fg = get(g:, 'japanese_indigo_fg', 'normal')
-
-" ---------------------------------------------------------------
-" Uniform Diff Background
-" ---------------------------------------------------------------
-let g:japanese_indigo_uniform_diff_bg = get(g:, 'japanese_indigo_uniform_diff_bg', 0)
 
 " ---------------------------------------------------------------
 " Colors
@@ -189,7 +190,11 @@ call <sid>hi('LineNr', s:light_indigo, s:indigo, '', '')
 call <sid>hi('SignColumn', s:indigo, s:indigo, '', '')
 call <sid>hi('StatusLine', s:light_indigo, s:medium_indigo, '', '')
 call <sid>hi('StatusLineNC', s:medium_indigo, s:light_indigo, '', '')
-call <sid>hi('VertSplit', s:medium_indigo, s:medium_grey, '', '')
+if g:japanese_indigo_vert_split
+    call <sid>hi('VertSplit', s:medium_indigo, s:medium_grey, '', '')
+else
+    call <sid>hi('VertSplit', s:indigo, s:medium_grey, '', '')
+endif
 call <sid>hi('ColorColumn', '', s:medium_indigo, '', '')
 
 " Gutter
