@@ -104,11 +104,20 @@ let s:nord_orange=['#d08770', '209']
 let s:nord_red=['#bf616a', '176']
 let s:nord_dark_red=['#9d5057', '221']
 let s:nord_pink=['#b48ead', '176']
-" consider switching turquoise to b4baca or 80b4c4
-let s:nord_turquoise=['#88c0d0', '73']
+" consider switching turquoise to b4baca
+let s:nord_turquoise=['#88c0d0', '73'] " original turquoise
+if g:japanese_indigo_bg ==? 'dark'
+    let s:nord_turquoise=['#78a9b8', '73'] " darker turquoise
+endif
 let s:nord_blue=['#5e81ac', '68']
-let s:nord_green=['#a3b38c', '114']
+let s:nord_green=['#a3b38c', '114'] " original green
+if g:japanese_indigo_bg ==? 'dark'
+    let s:nord_green=['#92a17e', '114'] " darker green
+endif
 let s:nord_light_blue=['#81a1c1', '68']
+if g:japanese_indigo_bg ==? 'dark'
+    let s:nord_light_blue=['#7795b3', '68']
+endif  
 
 "let s:cambridge_blue=['#96bbbb', '73']
 let s:brown=['#ab7967', '137']
