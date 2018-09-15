@@ -59,7 +59,7 @@ endif
 " ---------------------------------------------------------------
 " Contrast Settings
 " ---------------------------------------------------------------
-let g:japanese_indigo_bg = get(g:, 'japanese_indigo_bg', 'normal')
+let g:japanese_indigo_bg = get(g:, 'japanese_indigo_bg', 'dark')
 let g:japanese_indigo_fg = get(g:, 'japanese_indigo_fg', 'normal')
 
 " ---------------------------------------------------------------
@@ -71,7 +71,7 @@ let g:japanese_indigo_uniform_diff_bg = get(g:, 'japanese_indigo_uniform_diff_bg
 " Colors
 " ---------------------------------------------------------------
 " indigo / theme base
-let s:indigo=['#29323e', '235']
+let s:indigo=['#252c37', '235'] " Dark is the default.
 if g:japanese_indigo_bg ==? 'light'
     let s:indigo=['#2e3745', '235']
 elseif g:japanese_indigo_bg ==? 'normal'
@@ -79,9 +79,9 @@ elseif g:japanese_indigo_bg ==? 'normal'
 elseif g:japanese_indigo_bg ==? 'dark'
     let s:indigo=['#252c37', '235']
 endif  
-let s:medium_indigo=['#37414e', '237']
-if g:japanese_indigo_bg ==? 'dark'
-    let s:medium_indigo=['#2c343e', '235']
+let s:medium_indigo=['#2c343e', '235']
+if g:japanese_indigo_bg !=? 'dark'
+    let s:medium_indigo=['#37414e', '237']
 endif  
 let s:light_indigo=['#65737e', '243']
 let s:medium_grey=['#4f5b66', '240']
@@ -90,9 +90,12 @@ let s:dark_silver=['#a7adba', '145']
 let s:medium_silver=['#c0c5ce', '251']
 "let s:base06=['#cdd3de', '252']
 let s:light_silver=['#d8dee9', '253']
-let s:bone_white=['#a0a6b3', '203']
+"let s:bone_white=['#93a1a1', '203'] " solarized text color
+let s:bone_white=['#9398a1', '203'] " Slightly lighter to decrease contrast.
 if g:japanese_indigo_fg ==? 'light'
     let s:bone_white=['#aab1be', '203']
+elseif g:japanese_indigo_bg ==? 'normal'
+    let s:bone_white=['#a0a6b3', '203']
 endif
 
 " nord colors
@@ -255,6 +258,7 @@ call <sid>hi('cppRawString', s:nord_pink, '', '', '')
 " Rust
 call <sid>hi('rustStorage', s:nord_orange, '', '', '')
 
+" CSS
 call <sid>hi('csClass', s:nord_yellow, '', '', '')
 call <sid>hi('csAttribute', s:nord_yellow, '', '', '')
 call <sid>hi('csModifier', s:nord_pink, '', '', '')
@@ -267,6 +271,7 @@ call <sid>hi('cssColor', s:nord_turquoise, '', '', '')
 call <sid>hi('cssBraces', s:medium_silver, '', '', '')
 call <sid>hi('cssClassName', s:nord_pink, '', '', '')
 
+" Diff
 if g:japanese_indigo_uniform_diff_bg
     call <sid>hi('DiffAdd', s:nord_green, s:medium_indigo, '', '')
     call <sid>hi('DiffChange', s:light_indigo, s:medium_indigo, '', '')
@@ -284,9 +289,11 @@ call <sid>hi('DiffNewFile', s:nord_green, s:indigo, '', '')
 call <sid>hi('DiffLine', s:nord_blue, s:indigo, '', '')
 call <sid>hi('DiffRemoved', s:white, s:bone_white, '', '')
 
+" Git
 call <sid>hi('gitCommitOverflow', s:bone_white, '', '', '')
 call <sid>hi('gitCommitSummary', s:nord_green, '', '', '')
 
+" HTML
 call <sid>hi('htmlBold', s:nord_yellow, '', '', '')
 call <sid>hi('htmlItalic', s:nord_pink, '', '', '')
 call <sid>hi('htmlTag', s:nord_turquoise, '', '', '')
@@ -294,10 +301,12 @@ call <sid>hi('htmlEndTag', s:nord_turquoise, '', '', '')
 call <sid>hi('htmlArg', s:nord_yellow, '', '', '')
 call <sid>hi('htmlTagName', s:light_silver, '', '', '')
 
+" JS
 call <sid>hi('javaScript', s:medium_silver, '', '', '')
 call <sid>hi('javaScriptNumber', s:nord_orange, '', '', '')
 call <sid>hi('javaScriptBraces', s:medium_silver, '', '', '')
 
+" Markdown
 call <sid>hi('markdownCode', s:nord_green, '', '', '')
 call <sid>hi('markdownCodeBlock', s:nord_green, '', '', '')
 call <sid>hi('markdownHeadingDelimiter', s:nord_blue, '', '', '')
@@ -312,21 +321,26 @@ call <sid>hi('NeomakeInfoSign', s:white, s:indigo, '', '')
 call <sid>hi('NeomakeError', s:bone_white, '', 'undercurl', s:bone_white)
 call <sid>hi('NeomakeWarning', s:bone_white, '', 'undercurl', s:bone_white)
 
+" ALE
 call <sid>hi('ALEErrorSign', s:nord_orange, s:indigo, s:bold, '')
 call <sid>hi('ALEWarningSign', s:nord_yellow, s:indigo, s:bold, '')
 call <sid>hi('ALEInfoSign', s:white, s:indigo, s:bold, '')
 
+" NERDTree
 call <sid>hi('NERDTreeExecFile', s:medium_silver, '', '', '')
 call <sid>hi('NERDTreeDirSlash', s:nord_blue, '', '', '')
 call <sid>hi('NERDTreeOpenable', s:nord_blue, '', '', '')
 
+" PHP
 call <sid>hi('phpComparison', s:medium_silver, '', '', '')
 call <sid>hi('phpParent', s:medium_silver, '', '', '')
 call <sid>hi('phpMemberSelector', s:medium_silver, '', '', '')
 
+" Python
 call <sid>hi('pythonRepeat', s:nord_pink, '', '', '')
 call <sid>hi('pythonOperator', s:nord_pink, '', '', '')
 
+" Ruby
 call <sid>hi('rubyConstant', s:nord_yellow, '', '', '')
 call <sid>hi('rubySymbol', s:nord_green, '', '', '')
 call <sid>hi('rubyAttribute', s:nord_blue, '', '', '')
@@ -335,6 +349,7 @@ call <sid>hi('rubyInterpolationDelimiter', s:brown, '', '', '')
 call <sid>hi('rubyStringDelimiter', s:nord_green, '', '', '')
 call <sid>hi('rubyRegexp', s:nord_turquoise, '', '', '')
 
+" SASS
 call <sid>hi('sassidChar', s:bone_white, '', '', '')
 call <sid>hi('sassClassChar', s:nord_orange, '', '', '')
 call <sid>hi('sassInclude', s:nord_pink, '', '', '')
@@ -346,11 +361,13 @@ call <sid>hi('vimfilerNormalFile', s:medium_silver, s:indigo, '', '')
 call <sid>hi('vimfilerOpenedFile', s:nord_blue, '', '', '')
 call <sid>hi('vimfilerClosedFile', s:nord_blue, '', '', '')
 
+" GitGutter
 call <sid>hi('GitGutterAdd', s:nord_green, s:indigo, s:bold, '')
 call <sid>hi('GitGutterChange', s:nord_blue, s:indigo, s:bold, '')
 call <sid>hi('GitGutterDelete', s:bone_white, s:indigo, s:bold, '')
 call <sid>hi('GitGutterChangeDelete', s:nord_pink, s:indigo, s:bold, '')
 
+" XML
 call <sid>hi('xmlTag', s:nord_turquoise, '', '', '')
 call <sid>hi('xmlTagName', s:medium_silver, '', '', '')
 call <sid>hi('xmlEndTag', s:nord_turquoise, '', '', '')
