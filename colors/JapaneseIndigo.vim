@@ -206,8 +206,8 @@ call <sid>hi('CursorLineNR', s:indigo, s:indigo, '', '')
 call <sid>hi('CursorLineNr', s:light_indigo, s:medium_indigo, '', '')
 
 " Search
-call <sid>hi('Search', s:indigo, s:nord_light_blue, '', '')
-call <sid>hi('IncSearch', s:nord_yellow, s:indigo, '', '')
+call <sid>hi('Search', s:nord_orange, s:medium_indigo, s:bold, '')
+call <sid>hi('IncSearch', s:indigo, s:nord_yellow, s:bold, '')
 
 " Tabs
 call <sid>hi('TabLine', s:light_indigo, s:medium_indigo, '', '')
