@@ -89,9 +89,7 @@ let s:medium_grey=['#4f5b66', '240']
 
 let s:dark_silver=['#a7adba', '145']
 let s:medium_silver=['#c0c5ce', '251']
-"let s:base06=['#cdd3de', '252']
 let s:light_silver=['#d8dee9', '253']
-"let s:bone_white=['#93a1a1', '203'] " solarized text color
 let s:bone_white=['#9398a1', '203'] " Slightly lighter to decrease contrast.
 if g:japanese_indigo_fg ==? 'light'
     let s:bone_white=['#aab1be', '203']
@@ -120,12 +118,15 @@ if g:japanese_indigo_bg ==? 'dark'
     let s:nord_light_blue=['#7795b3', '68']
 endif  
 
-"let s:cambridge_blue=['#96bbbb', '73']
 let s:brown=['#ab7967', '137']
-"let s:steel_teal=['#618985', '74']
-"let s:granite_purple=['#67597a', '68']
 let s:white=['#ffffff', '15']
 let s:none=['NONE', 'NONE']
+
+"let s:solarized_white=['#93a1a1', '203'] " solarized text color
+
+"let s:cambridge_blue=['#96bbbb', '73']
+"let s:steel_teal=['#618985', '74']
+"let s:granite_purple=['#67597a', '68']
 
 
 " ---------------------------------------------------------------
@@ -176,7 +177,7 @@ call <sid>hi('PmenuThumb', '', s:light_silver, '', '')
 call <sid>hi('SpecialKey', s:light_indigo, '', '', '')
 call <sid>hi('TooLong', s:bone_white, '', '', '')
 call <sid>hi('Underlined', s:bone_white, '', '', '')
-call <sid>hi('Visual', '', s:nord_blue, '', '')
+call <sid>hi('Visual', '', s:medium_indigo, '', '')
 call <sid>hi('VisualNOS', s:bone_white, '', '', '')
 call <sid>hi('WarningMsg', s:bone_white, '', '', '')
 call <sid>hi('WildMenu', s:white, s:nord_blue, '', '')
